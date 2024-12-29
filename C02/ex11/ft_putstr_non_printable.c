@@ -17,7 +17,7 @@ void	ft_putchar_hex(unsigned char c)
 	char	*hex;
 	char	hex_rep[2];
 
-	*hex = "0123456789abcdef";
+	hex = "0123456789abcdef";
 	hex_rep[0] = hex[c / 16];
 	hex_rep[1] = hex[c % 16];
 	write(1, hex_rep, 2);
