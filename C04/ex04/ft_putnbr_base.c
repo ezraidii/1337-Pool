@@ -6,7 +6,7 @@
 /*   By: codebind <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 15:56:16 by codebind          #+#    #+#             */
-/*   Updated: 2025/01/06 16:51:44 by codebind         ###   ########.fr       */
+/*   Updated: 2025/01/07 13:39:01 by codebind         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,13 +45,13 @@ int	error(char *base)
 void	ft_putnbr_base(int nbr, char *base)
 {
 	long	num;
-	int	count;
+	int		count;
 
 	count = 0;
 	if (error(base) == 0)
-	return;
+		return;
 	while (base[count])
-	count++;
+		count++;
 	num = nbr;
 	if (num < 0)
 	{
@@ -59,6 +59,8 @@ void	ft_putnbr_base(int nbr, char *base)
 		num = -num;
 	}
 	if (num >= count)
+	{
 		ft_putnbr_base(num / count, base);
-		write(1, &base[num % count], 1);
+	}
+	write(1, &base[num % count], 1);
 }
