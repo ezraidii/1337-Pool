@@ -10,21 +10,19 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_iterative_factorial(int nb)
+int     ft_iterative_factorial(int nb)
 {
-	int	i;
-	int	factoriel;
+        int     factoriel;
 
-	if (nb < 0)
-	{
-		return 0;
-	}
-	i = 1;
-	factoriel = 1;
-	while (i <= nb)
-	{
-		factoriel *= i;
-		i++;
-	}
-	return factoriel;
+        if (nb < 0)
+        {
+                return 0;
+        }
+        factoriel = 1;
+        while (nb >= 1)
+        {
+                factoriel *= nb;
+                nb--;
+        }
+        return factoriel;
 }
